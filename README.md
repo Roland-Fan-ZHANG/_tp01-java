@@ -6,7 +6,7 @@ Le programme se lance, il ne se passe rien.
 
 ## Exercice 3.3 - Pourquoi `nextInt()` n'est pas une fonction ?
 
-```java
+`java
 nextInt()
-```
+`
  
