@@ -6,7 +6,9 @@ Le programme se lance, il ne se passe rien.
 
 ## Exercice 3.3 - Pourquoi `nextInt()` n'est pas une fonction ?
 
-`java
-nextInt()
-`
+`nextInt()` n'est pas une fonction car elle s'appelle sur une classe.
+
+## Qu'est `nextInt()` alors ?
+
+`nextInt()` est une méthode.
  
