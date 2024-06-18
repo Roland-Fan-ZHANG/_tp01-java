@@ -14,7 +14,7 @@ Le programme se lance, il ne se passe rien.
 
 ## Exercice 3.4 - Expliquer la ligne : `import java.util.Scanner;`
 
-C'est un raccourci pour importer le `Scanner`, sans lui il aurait fallu écrire
+C'est un raccourci pour importer `Scanner`, sans lui il aurait fallu écrire :
 
 ```java
 java.util.Scanner scanner = new java.util.Scanner(System.in);
