@@ -1,5 +1,15 @@
 # [_tp01-java](https://monge.univ-mlv.fr/ens/IR/IR1/2023-2024/Java/td01.php)
 
+# Exercice 1.1 - Écrire le programme suivant :
+
+```java
+public class HelloGroland {
+  public static void main(String[] args) {
+    System.out.println("Hello Groland");
+  }
+}
+```
+
 ## Exercice 2.1 - Que se passe-t-il si l'on ne passe pas d'argument lors de l'exécution du programme ?
 
 Le programme se lance, il ne se passe rien.
