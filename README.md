@@ -48,7 +48,7 @@ arguments
 Les arguments de la ligne de commande sont stockés dans le tableau de chaînes de caractères passé en argument à la méthode : `public static void main(String[] args)`.
 
 ## 2.1 - Dans un premier temps, afficher le premier argument de la ligne de commande (dans notre exemple Voici).
-## Que se passe-t-il si l'on ne passe pas d'argument lors de l'exécution du programme ?
+### Que se passe-t-il si l'on ne passe pas d'argument lors de l'exécution du programme ?
 
 Le programme se lance, il ne se passe rien.
 
