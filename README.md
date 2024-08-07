@@ -1,6 +1,6 @@
 # [_tp01-java](https://monge.univ-mlv.fr/ens/IR/IR1/2023-2024/Java/td01.php)
 
-# Exercice 1.1 - Écrire le programme suivant :
+## Exercice 1.1 - Écrire le programme suivant :
 
 ```java
 public class HelloGroland {
