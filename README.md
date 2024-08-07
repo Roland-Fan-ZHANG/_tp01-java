@@ -19,4 +19,10 @@ C'est un raccourci pour importer `Scanner`, sans lui il aurait fallu écrire :
 ```java
 java.util.Scanner scanner = new java.util.Scanner(System.in);
 ```
+
+## Exercice 4.1 - Quelle doit être la ligne de commande pour compiler le fichier Point.java ?
+
+```java
+javac Point.java
+```
  
