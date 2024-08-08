@@ -1,4 +1,4 @@
-# [TP 01 Java](https://monge.univ-mlv.fr/ens/IR/IR1/2023-2024/Java/td01.php)
+# [TP-01 Java](https://monge.univ-mlv.fr/ens/IR/IR1/2023-2024/Java/td01.php)
 
 # Exercice 1 - Hello Groland
 
