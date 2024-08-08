@@ -109,7 +109,6 @@ Scanner scanner = new Scanner(System.in);
 int value = scanner.nextInt();
 ```
 
-
 ## 3.3 - Pourquoi `nextInt()` n'est pas une fonction ?
 
 `nextInt()` n'est pas une fonction car elle s'appelle sur une classe.
@@ -128,9 +127,87 @@ java.util.Scanner scanner = new java.util.Scanner(System.in);
 
 # Exercice 4 - Record et conversion de String en entier
 
-## 4.1 - Quelle doit être la ligne de commande pour compiler le fichier Point.java ?
+On souhaite écrire un programme calculant la distance entre deux points, ou plus exactement la distance entre un point et l'origine, i.e. le point de coordonnées (0,0).
+
+Voici un exemple d'exécution que l'on souhaite obtenir :
+
+```console
+$ java Point 3 4
+x=3, y=4
+Point[x=3, y=4]
+dist = 5.0
+```
+
+## 4.1 - Dans un premier temps, créer un `record Point` (dans un fichier `Point.java`) avec deux composants x et y, tous les deux de type int.
+
+```java
+public record Point(int x, int y) {
+
+}
+```
+### Quelle doit être la ligne de commande pour compiler le fichier `Point.java` ?
 
 ```java
 javac Point.java
 ```
+
+## 4.2 - Écrire une méthode `main` qui prend les entiers x et y sur la ligne de commande (3 et 4 dans l'exemple ci-dessus), les convertit en valeurs entières et affiche celles-ci (la ligne `x=3, y=4` dans l'exemple).
+
+### Note : La méthode statique `parseInt(String s)` de la classe `java.lang.Integer` permet de récupérer la valeur d'un entier stockée dans une chaîne de caractères.
+
+```java
+public record Point(int x, int y) {
+
+	public static void main(String[] args) {
+		int x = Integer.parseInt(args[0]);
+		int y = Integer.parseInt(args[1]);
+		System.out.println("x=" + x + ", y=" + y);
+	}
+}
+```
+
+## 4.3 - Que veut dire "static" pour une méthode ?
+
+Une méthode static signifie qu'elle appartient à la classe. On peut donc par exemple appeler la méthode sans instance de classe.
+
+## 4.4 - Que se passe-t-il lorsque l'un des arguments n'est pas un nombre ?
+
+Le programme renvoi une `Exception`, plus précisement `NumberFormatException`.
+
+## 4.5 - Dans le main, ajouter des instructions pour créer un instance du record Point, avec les deux entiers x et y et afficher celui-ci.
+
+```java
+public static void main(String[] args) {
+  // previous code
+  Point point = new Point(3, 4);
+  System.out.println(point);
+}
+```
+
+## 4.6 - On souhaite ajouter au record `Point` une méthode d'instance (une méthode non statique) nommée `distance` qui calcule la distance entre deux points sous forme d'un nombre à virgule flottante.
+
+### Quels sont les paramètres et le type de retour de la méthode `distance` ?
+
+La méthode doit prendre deux `Point` en paramètre et doit retourner un nombre à virgule flottante donc un `float` ou un `double`
+
+### Sachant que calculer la distance entre deux points est équivalent à utiliser Pythagore sur la distance en x et la distance en y entre les deux points et qu'il existe une méthode statique Math.sqrt qui renvoie la racine carrée d'un nombre, écrire la méthode distance et afficher dans le main la distance entre le point (x, y) et un point à l'origine (0, 0).
+
+```java
+public record Point(int x, int y) {
+	
+	public double distance(Point p1, Point p2) {
+		var x = p1.x - p2.x;
+		var y = p1.y - p2.y;
+		return Math.sqrt(x * x + y * y);
+	}
+	
+	public static void main(String[] args) {
+		// previous code
+		Point pointOrigin = new Point(0, 0);
+    Point point1 = new Point(3, 4);
+		System.out.println("dist = " + pointOrigin.distance(pointOrigin, point1));
+	}
+}
+```
+
  
