@@ -203,11 +203,13 @@ public record Point(int x, int y) {
 	
 	public static void main(String[] args) {
 		// previous code
-		Point pointOrigin = new Point(0, 0);
-    Point point1 = new Point(3, 4);
+        Point pointOrigin = new Point(0, 0);
+        Point point1 = new Point(3, 4);
 		System.out.println("dist = " + pointOrigin.distance(pointOrigin, point1));
 	}
 }
 ```
+
+# Exercice 5 - 
 
  
